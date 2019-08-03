@@ -792,6 +792,11 @@ open class LineChartRenderer: LineRadarRenderer
     
     internal func drawGradientLine(_ context: CGContext, dataSet: ILineChartDataSet, spline: CGPath, matrix: CGAffineTransform)
     {
+        if let gradientPosition = dataSet.gradientPositions {
+            print(gradientPosition)
+        } else {
+            return
+        }
         context.saveGState()
         let gradientPath = spline.copy(strokingWithWidth: dataSet.lineWidth, lineCap: .butt, lineJoin: .miter, miterLimit: 10)
         context.addPath(gradientPath)
@@ -813,7 +818,6 @@ open class LineChartRenderer: LineRadarRenderer
             cColor = dataSet.colors[i]
             gradientColors.append(cColor.cgColor)
         }
-        
         
         //Set middle colors
         for gradientPosition in dataSet.gradientPositions! {
