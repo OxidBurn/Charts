@@ -669,9 +669,10 @@
 			};
 			buildConfigurationList = 5B57BBAA1A9B26AA0036A6CC /* Build configuration list for PBXProject "ChartsDemo-iOS" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
